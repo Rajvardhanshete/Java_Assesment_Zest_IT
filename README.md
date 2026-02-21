@@ -35,7 +35,6 @@ product-management-api/
 │   │   ├── java/
 │   │   │   └── com/zest/productapi/product_management_api/
 │   │   │       ├── config/
-│   │   │       │   └── SecurityConfig.java
 │   │   │       ├── controller/
 │   │   │       │   ├── AuthController.java
 │   │   │       │   └── ProductController.java
@@ -59,6 +58,7 @@ product-management-api/
 │   │   │       ├── security/
 │   │   │       │   ├── JwtAuthenticationFilter.java
 │   │   │       │   └── JwtService.java
+│   │   │       │   └── SecurityConfig.java
 │   │   │       ├── service/
 │   │   │       │   ├── ProductService.java
 │   │   │       │   └── UserService.java
