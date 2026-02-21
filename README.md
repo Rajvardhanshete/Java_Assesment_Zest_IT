@@ -29,22 +29,55 @@ The user wants a README.md template for their GitHub repository. They want it in
 ## Project Structure
 
 ```
-src/
-├── main/
-│   ├── java/
-│   │   └── com/zest/productapi/product_management_api/
-│   │       ├── config/
-│   │       ├── controller/
-│   │       ├── dto/
-│   │       ├── entity/
-│   │       ├── exception/
-│   │       ├── repository/
-│   │       ├── security/
-│   │       ├── service/
-│   │       └── ProductManagementApplication.java
-│   └── resources/
-│       └── application.yml
-└── test/
+product-management-api/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/zest/productapi/product_management_api/
+│   │   │       ├── config/
+│   │   │       │   └── SecurityConfig.java
+│   │   │       ├── controller/
+│   │   │       │   ├── AuthController.java
+│   │   │       │   └── ProductController.java
+│   │   │       ├── dto/
+│   │   │       │   ├── AuthRequest.java
+│   │   │       │   ├── AuthResponse.java
+│   │   │       │   ├── ItemRequest.java
+│   │   │       │   ├── ItemResponse.java
+│   │   │       │   ├── ProductRequest.java
+│   │   │       │   └── ProductResponse.java
+│   │   │       ├── entity/
+│   │   │       │   ├── Item.java
+│   │   │       │   ├── Product.java
+│   │   │       │   └── User.java
+│   │   │       ├── exception/
+│   │   │       │   ├── GlobalExceptionHandler.java
+│   │   │       │   └── ResourceNotFoundException.java
+│   │   │       ├── repository/
+│   │   │       │   ├── ProductRepository.java
+│   │   │       │   └── UserRepository.java
+│   │   │       ├── security/
+│   │   │       │   ├── JwtAuthenticationFilter.java
+│   │   │       │   └── JwtService.java
+│   │   │       ├── service/
+│   │   │       │   ├── ProductService.java
+│   │   │       │   └── UserService.java
+│   │   │       └── ProductManagementApplication.java
+│   │   └── resources/
+│   │       └── application.yml
+│   └── test/
+│       ├── java/
+│       │   └── com/zest/productapi/product_management_api/
+│       │       ├── controller/
+│       │       │   └── ProductControllerTest.java
+│       │       └── service/
+│       │           └── ProductServiceTest.java
+│       └── resources/
+│           └── application.yml
+├── Dockerfile
+├── docker-compose.yml
+├── pom.xml
+└── README.md
 ```
 
 ---
